@@ -8,7 +8,7 @@ def build ()
   sh 'mvn package'
 }
 
-def dockercontex()
+def dockercontext()
 {
   sh '''
      mkdir -p docker
@@ -21,9 +21,9 @@ EOF
    '''
 }
 
-def docker build(imageName)
+def dockerBuild(imageName)
 {
-  sh "docker build -t $(imageName) docker"
+  sh "docker build -t ${imageName} docker"
 }
 
 def deployment(containerName, imageName)
