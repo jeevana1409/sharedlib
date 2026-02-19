@@ -11,4 +11,7 @@ def gitDownload(String repo) {
         credentialsId: '' // add GitHub credentials ID if repo is private
     )
 }
-
+def build()
+{ 
+  sh 'mvn package'
+}
